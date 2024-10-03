@@ -1,0 +1,35 @@
+#include<stdio.h>
+int main()
+{
+
+	int i,j,n,m,k,l;
+	printf("enter the no of elements in the array :");
+	scanf("%d",&n);
+	int a[n];
+	printf("enter the elements in the array ;");
+	for(i=1;i<=n;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	for(i=1;i<=n;i++)
+	{
+		printf("%d ",&a[i]);
+	}
+	printf("enter the number of digits N you want to rotate the above array ;");
+	scanf("%d",&m);
+	j=n-m;
+	for(i=1;i<=m;i++)
+	{
+		a[i]=a[j];
+		j++;
+	}
+	for(k=1;k<=j;k++)
+	{
+		a[j]=a[k];
+		j++;
+	}
+	for(l=1;l<=n;l++)
+	{
+		printf("%d ",a[l]);
+	}
+}
